@@ -1,0 +1,10 @@
+.subheading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pokemon-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
