@@ -1,0 +1,36 @@
+<main>
+    <section class="subheading">
+        <div class="title">
+            <h1>Pokedex App</h1>
+            <h3>Pokebusca</h3>
+        </div>
+
+        <app-poke-search (emmitSearch)="getSearch($event)"></app-poke-search>
+    </section>
+
+    <hr>
+    <section class=" itemsPage">
+        <h5>Exibindo 20 dos 898 Pokemons</h5>
+        <pagination-controls class="top" (pageChange)="page = $event"></pagination-controls>
+    </section>
+    <hr>
+
+    <div class="pokemon-list" *ngFor="let pokemon of getAllPokemons | paginate: { itemsPerPage: 20, currentPage: page}">
+        <a (click)="getDetail(pokemon.status.id)" [routerLink]="['details', pokemon.status.id]" class="list">
+            <img [src]="pokemon.status.sprites.front_default" [alt]="pokemon.name">
+            <section class="info">
+                <h3>{{pokemon.name}} Nº {{pokemon.status.id}}</h3>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet sit doloremque odio nihil
+                    tempora
+                    suscipit debitis, culpa et amet natus ducimus magni? Repellendus veniam iure nam ad, atque
+                    tempore
+                    earum!</p>
+            </section>
+        </a>
+    </div>
+
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</main>
+
+<footer></footer>

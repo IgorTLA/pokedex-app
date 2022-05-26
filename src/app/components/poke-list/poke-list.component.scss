@@ -1,0 +1,131 @@
+@import "../../../assets/scss/variables.scss";
+
+main {
+    margin: 10px 20px;
+
+    section.itemsPage {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 8px;
+        padding-bottom: 0;
+
+        h5 {
+            margin-bottom: 1rem;
+        }
+
+        pagination-controls {
+            padding: 0;
+        }
+    }
+}
+
+.subheading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+.pokemon-list {
+    display: flex;
+    flex-direction: column;
+
+    h3:first-letter {
+        text-transform: capitalize;
+    }
+
+    a.list {
+        display: flex;
+        padding: 16px 8px;
+        width: 100%;
+        border-bottom: 1px solid $light-gray;
+        text-decoration: none;
+        color: $black;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+            transition: all ease 0.3s;
+        }
+
+        img {
+            border-radius: 4px;
+            border: 1px solid $black;
+            background-color: $white;
+        }
+
+        .info {
+            padding-left: 10px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.pageChange {
+    display: flex;
+}
+
+pagination-controls {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 8px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        section.itemsPage {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        pagination-controls.top {
+            display: none;
+        }
+    }
+
+    .subheading {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &:hover {
+            display: none;
+        }
+    }
+
+    img {
+        width: 192px;
+    }
+
+    pagination-controls {
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    footer {
+        display: none;
+    }
+}

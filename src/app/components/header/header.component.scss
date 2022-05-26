@@ -1,0 +1,39 @@
+@import "../../../assets/scss/variables.scss";
+
+mat-toolbar {
+    padding: 22px 28px;
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        align-items: center;
+        color: $white;
+
+        &.logo {
+            cursor: pointer;
+
+            img {
+                width: 50px;
+            }
+
+            h1 {
+                font-size: 30px;
+                font-weight: 600;
+            }
+        }
+
+        &.user {
+            font-size: 21;
+            font-weight: 700;
+
+            mat-slide-toggle {
+                color: white;
+                padding-right: 20px;
+                font-size: 10px;
+            }
+        }
+    }
+}

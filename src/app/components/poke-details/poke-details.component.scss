@@ -1,0 +1,89 @@
+@import "../../../assets/scss/variables.scss";
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+    background-color: #ccc;
+
+    a {
+        mat-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            font-weight: 900;
+            padding: 32px;
+        }
+
+        mat-icon:hover {
+            transform: scale(1.6);
+        }
+    }
+
+    div {
+        a.btn {
+            font-size: 20px;
+            padding: 8px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: $white;
+            background-color: #0000005b;
+        }
+
+        a.btn:hover {
+            background-color: #0000009c;
+            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 30px;
+        margin-top: 10px;
+        border-radius: 8px;
+        background-color: $black;
+    }
+
+    .pokemon-names {
+        color: $white;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    .pokemon-status {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: $white;
+
+        img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 26px;
+        }
+
+        article {
+            h3 {
+                text-align: center;
+            }
+
+            li {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
