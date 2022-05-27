@@ -1,5 +1,5 @@
 # PokedexApp
-Feito com muita dedicação, app feito com Angular, TypeScript e SCSS
+Feito com muita dedicação.
 
 ### Incrementos 
 - Status do pokemon
