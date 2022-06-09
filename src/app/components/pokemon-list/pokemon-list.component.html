@@ -1,0 +1,21 @@
+<mat-toolbar>
+    <div class="logo">
+        <img src="../../../assets/images/logo.png" alt="Logo Advise">
+        <h1>Pokedex</h1>
+    </div>
+</mat-toolbar>
+
+<section>
+    <mat-form-field class="search" floatLabel="always">
+        <mat-label>Pokemon Name</mat-label>
+        <input matInput [formControl]="search" (keydown.enter)="onSearchPokemon()" placeholder="Charizard or 6">
+    </mat-form-field>
+
+    <mat-slide-toggle color="primary" [checked]="classicMode" (change)="classicMode = !classicMode">
+        {{classicMode ? 'Classic' : 'Gif'}}
+    </mat-slide-toggle>
+</section>
+
+<main>
+    <img src="bg-pokeball" alt="">
+</main>

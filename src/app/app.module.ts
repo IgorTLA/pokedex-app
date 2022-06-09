@@ -1,36 +1,32 @@
+//Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxPaginationModule } from 'ngx-pagination';
+import { MaterialModule } from './material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
-
+//Components
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { PokeDetailsComponent } from './components/poke-details/poke-details.component';
-import { PokeListComponent } from './components/poke-list/poke-list.component';
-import { PokeSearchComponent } from './components/poke-search/poke-search.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
+import { PokemonService } from './services/pokemon.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    PokeDetailsComponent,
-    PokeListComponent,
-    PokeSearchComponent
+    PokemonListComponent,
+    PokemonDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
     HttpClientModule,
-    NgxPaginationModule,
+    MaterialModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
