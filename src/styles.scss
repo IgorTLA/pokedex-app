@@ -30,6 +30,25 @@ $dragon: #7038F9;
 $dark: #6F5848;
 $steel: #B8B8D0;
 $fairy: #EE99AC;
+//light
+$grass-light: #AADC91;
+$fire-light: #F6AE7C;
+$water-light: #A0B9F6;
+$normal-light: #C9C8AA;
+$flying-light: #C8B9F6;
+$bug-light: #C8D273;
+$poison-light: #C386C4;
+$electric-light: #FBE17C;
+$ground-light: #EBD7A0;
+$fighting-light: #D77C77;
+$psychic-light: #FB96B4;
+$rock-light: #D2C281;
+$ice-light: #BEE6E6;
+$ghost-light: #9996BF;
+$dragon-light: #A581FB;
+$dark-light: #A4968B;
+$steel-light: #D2D2E1;
+$fairy-light: #F4BFCB;
 
 $gray-light: #d8d8d8;
 $gray-dark: #606060;
@@ -44,23 +63,41 @@ $general: (
     $black),
     ('white', $white),
     ('grass', $grass),
+    ('grass-light', $grass-light),
     ('fire', $fire),
+    ('fire-light', $fire-light),
     ('water', $water),
+    ('water-light', $water-light),
     ('normal', $normal),
+    ('normal-light', $normal-light),
     ('flying', $flying),
+    ('flying-light', $flying-light),
     ('bug', $bug),
+    ('bug-light', $bug-light),
     ('poison', $poison),
+    ('poison-light', $poison-light),
     ('electric', $electric),
+    ('electric-light', $electric-light),
     ('ground', $ground),
+    ('ground-light', $ground-light),
     ('fighting', $fighting),
+    ('fighting-light', $fighting-light),
     ('psychic', $psychic),
+    ('psychic-light', $psychic-light),
     ('rock', $rock),
+    ('rock-light', $rock-light),
     ('ice', $ice),
+    ('ice-light', $ice-light),
     ('ghost', $ghost),
+    ('ghost-light', $ghost-light),
     ('dragon', $dragon),
+    ('dragon-light', $dragon-light),
     ('dark', $dark),
+    ('dark-light', $dark-light),
     ('steel', $steel),
+    ('steel-light', $steel-light),
     ('fairy', $fairy),
+    ('fairy-light', $fairy-light),
     ('gray', $gray
 );
 
@@ -68,9 +105,9 @@ $general: (
     $name: nth($color, 1);
     $value: nth($color, 2);
 
-    // .bg-color-#{$name} {
-    //     background-color: $value  !important
-    // }
+    .bg-color-#{$name} {
+        background-color: $value  !important
+    }
 
     .color-#{$name} {
         color: $value  !important;

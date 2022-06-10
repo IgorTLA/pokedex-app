@@ -1,5 +1,5 @@
 mat-toolbar {
-    padding: 2em 5%;
+    padding: 2em 8%;
     background-color: black;
     display: flex;
     align-items: center;
@@ -20,6 +20,68 @@ mat-toolbar {
             font-size: 30px;
             font-weight: 600;
             color: white;
+        }
+    }
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 8%;
+
+    mat-form-field {
+        width: 40rem;
+        font-size: 18px;
+    }
+
+    mat-slide-toggle {
+        width: 104px;
+        font-size: 18px;
+    }
+}
+
+main {
+    padding: 0 8%;
+
+    .loading {
+        margin-bottom: 10px;
+
+        span {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        mat-progress-bar {
+            height: 8px;
+        }
+    }
+
+    .pokemon-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+        .card {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 32px;
+            width: 24vw;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            background-color: rgb(163, 163, 163);
+
+            .card-info {
+                h2 {
+                    margin-bottom: 16px;
+
+                    &:first-letter {
+                        text-transform: capitalize;
+                    }
+                }
+            }
         }
     }
 }

@@ -38,7 +38,7 @@ class Type {
 }
 
 class Sprite {
-    font_default!: string;
+    front_default!: string;
 }
 
 class Stat {

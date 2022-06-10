@@ -4,10 +4,10 @@
         <h1>Pokedex</h1>
     </div>
 </mat-toolbar>
-
+<!-- Buscar -->
 <section>
     <mat-form-field class="search" floatLabel="always">
-        <mat-label>Pokemon Name</mat-label>
+        <mat-label>Pokemon Name or ID</mat-label>
         <input matInput [formControl]="search" (keydown.enter)="onSearchPokemon()" placeholder="Charizard or 6">
     </mat-form-field>
 
@@ -17,5 +17,24 @@
 </section>
 
 <main>
-    <img src="bg-pokeball" alt="">
+    <div class="loading" *ngIf="isLoading">
+        <span>Loading... please wait!!</span>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+
+    <div *ngIf="!isSearching" class="pokemon-list">
+        <div *ngFor="let pokemon of pokemons" (click)="onDetail(pokemon)">
+            <div class="card">
+                <div class="card-info">
+                    <h2 class="color-black">{{pokemon.name}}</h2>
+                    <span class="{{'bg-color-' + getPrincipalType(pokemon.types)}}"
+                        *ngFor="let type of pokemon.types">{{type.type.name}}</span>
+                </div>
+                <div class="card-img">
+                    <img *ngIf="classicMode" [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
+                </div>
+                <span class="platform {{'bg-color-' + getPrincipalType(pokemon.types) + '-light'}}"></span>
+            </div>
+        </div>
+    </div>
 </main>
